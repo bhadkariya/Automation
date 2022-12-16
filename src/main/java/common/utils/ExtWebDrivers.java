@@ -27,9 +27,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.log4testng.Logger;
 
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -48,7 +46,9 @@ public class ExtWebDrivers {
 		String TeamName = System.getProperty("propertyTeamName");
 		
 		if (TeamName.equals("wfm")) {
-			fis = new FileInputStream("resources/Setup/wfm.properties");			
+			fis = new FileInputStream("resources/Setup/wfm.properties");	
+			System.out.println("ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp");
+			
 		} else if (TeamName.equals("corehr")) {
 			fis = new FileInputStream("resources/Setup/corehr.properties");
 		}
@@ -100,17 +100,22 @@ public class ExtWebDrivers {
 		if (BrowserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			setDriver(new FirefoxDriver());
+			
+			System.out.println("anuroop ji " + driver);
+			System.out.println("BrowserName  " + BrowserName);
 
 		} else if (BrowserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			setDriver(new ChromeDriver());
-			System.out.println("anuroop ji " + driver);
 
-			System.out.println("BrowserName  " + BrowserName);
+			
+			
 
 		} else if (BrowserName.equalsIgnoreCase("ie")) {
 			WebDriverManager.iedriver().setup();
 			setDriver(new ChromeDriver());
+			
+			
 
 		} else if (BrowserName.equalsIgnoreCase("headless")) {
 			WebDriverManager.chromedriver().setup();
@@ -118,20 +123,19 @@ public class ExtWebDrivers {
 			chromeOptions.addArguments("--no-sandbox");
 			chromeOptions.addArguments("--headless");
 			chromeOptions.addArguments("disable-gpu");
-			ChromeDriver driver = new ChromeDriver(chromeOptions);
+			driver = new ChromeDriver(chromeOptions);			
 
 		}
 
 		else {
 			throw new IllegalArgumentException("The Browser Type is Undefined");
 		}
+		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		System.out.println("anuroop ");
 		driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// driver.close();
-
 	}
 
 	public void setup() throws Exception {
@@ -190,7 +194,7 @@ public class ExtWebDrivers {
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult result) throws Exception {
-		if (ITestResult.SUCCESS == result.getStatus() ||ITestResult.FAILURE == result.getStatus() || ITestResult.SKIP == result.getStatus()
+		if (ITestResult.FAILURE == result.getStatus() || ITestResult.SKIP == result.getStatus()
 				|| ITestResult.SUCCESS_PERCENTAGE_FAILURE == result.getStatus()) {
 			System.out.println("my status:::::::::::::::::::::::::::::" + result.getStatus());
 

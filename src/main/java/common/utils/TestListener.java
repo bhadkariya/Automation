@@ -1,12 +1,7 @@
 package common.utils;
 
-import java.util.Set;
-
-import org.openqa.selenium.WebDriver;
-import org.testng.IClass;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
-import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -55,7 +50,7 @@ public class TestListener extends ExtWebDrivers implements ITestListener{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
-		System.out.println("success");
+		System.out.println("Failed");
 		extentTest.get().log(Status.FAIL, "Test Fail");
 		try {
 			extentTest.get().addScreenCaptureFromPath(ewd.takeSnapShot(result));
@@ -72,7 +67,7 @@ public class TestListener extends ExtWebDrivers implements ITestListener{
 		System.out.println("Skip");
 		extentTest.get().log(Status.SKIP, "Test Skip");
 		try {
-			extentTest.get().addScreenCaptureFromPath(ewd.takeSnapShot(result));
+			extentTest.get().addScreenCaptureFromPath(takeSnapShot(result));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -89,7 +84,7 @@ public class TestListener extends ExtWebDrivers implements ITestListener{
 	@Override
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
-		System.out.println("on WARNING");
+		System.out.println("on start");
 	//	extentTest.get().log(Status.WARNING, "Test WARNING");
 		
 	}
@@ -104,6 +99,34 @@ public class TestListener extends ExtWebDrivers implements ITestListener{
 		
 	}
 	
-	
+//	public void tearDown(ITestResult result) throws Exception {
+//		if (ITestResult.FAILURE == result.getStatus() || ITestResult.SKIP == result.getStatus()
+//				|| ITestResult.SUCCESS_PERCENTAGE_FAILURE == result.getStatus()) {
+//			System.out.println("my status:::::::::::::::::::::::::::::" + result.getStatus());
+//
+//			try {
+//				takeSnapShot(result);
+//			} catch (Exception e) {
+//				System.out.println("Taking ScreenShot" + e.getMessage());
+//			}
+//		}
+//		driver.quit();
+//	}
+//
+//	public String takeSnapShot(ITestResult result) throws Exception {
+//		TakesScreenshot driver1 = (TakesScreenshot) driver;
+//		File source = driver1.getScreenshotAs(OutputType.FILE);
+//		ScreenShotPaths = System.getProperty("user.dir") + ScreenShotPath
+//				+ this.getClass().getName().substring(this.getClass().getName().lastIndexOf(".") + 1) + "_"
+//				+ result.getMethod().getMethodName() + "_"
+//				+ new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime()) + "_"
+//				+ result.getStatus() + ".png";
+//		System.out.println("ffffffffffffffffffffffffffffffffffffffffffffff" + ScreenShotPaths);
+//		FileUtils.copyFile(source, new File(ScreenShotPaths));
+//		return ScreenShotPaths;
+//
+//	}
+//
+
 
 }
