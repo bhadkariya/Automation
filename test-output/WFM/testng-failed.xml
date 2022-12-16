@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [WFM]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="common.utils.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="wfm.testcases(failed)">
+    <classes>
+      <class name="wfm.testcases.LoginTestCase">
+        <methods>
+          <include name="teaminfo"/>
+          <include name="setup"/>
+          <include name="facebooklogintest"/>
+          <include name="tearDown"/>
+          <include name="nameBefore"/>
+        </methods>
+      </class> <!-- wfm.testcases.LoginTestCase -->
+    </classes>
+  </test> <!-- wfm.testcases(failed) -->
+</suite> <!-- Failed suite [WFM] -->

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [wfm.testcases.LoginTestCase]" verbose="0">
+  <test name="Command line test(failed)" preserve-order="false">
+    <classes>
+      <class name="wfm.testcases.LoginTestCase">
+        <methods>
+          <include name="tearDown"/>
+          <include name="nameBefore"/>
+          <include name="teaminfo"/>
+          <include name="facebooklogintest"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

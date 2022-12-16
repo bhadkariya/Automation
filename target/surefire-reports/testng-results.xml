@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-16T11:27:55Z" name="WFM" finished-at="2022-12-16T11:28:09Z" duration-ms="14195">
+    <groups>
+    </groups>
+    <test started-at="2022-12-16T11:27:55Z" name="wfm.testcases" finished-at="2022-12-16T11:28:09Z" duration-ms="14195">
+      <class name="wfm.testcases.LoginTestCase">
+        <test-method is-config="true" signature="nameBefore(java.lang.reflect.Method)" started-at="2022-12-16T11:27:55Z" name="nameBefore" finished-at="2022-12-16T11:27:55Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void wfm.testcases.LoginTestCase.facebooklogintest() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method is-config="true" signature="teaminfo()" started-at="2022-12-16T11:27:55Z" name="teaminfo" finished-at="2022-12-16T11:27:55Z" duration-ms="0" status="PASS">
+        </test-method>
+        <test-method is-config="true" signature="setup()" started-at="2022-12-16T11:27:55Z" name="setup" finished-at="2022-12-16T11:28:01Z" duration-ms="5559" status="PASS">
+        </test-method>
+        <test-method signature="facebooklogintest()" started-at="2022-12-16T11:28:01Z" name="facebooklogintest" finished-at="2022-12-16T11:28:09Z" duration-ms="7995" status="PASS">
+        </test-method>
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)" started-at="2022-12-16T11:28:09Z" name="tearDown" finished-at="2022-12-16T11:28:09Z" duration-ms="355" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult: facebooklogintest STATUS:SUCCESS METHOD:wfm.testcases.LoginTestCase.facebooklogintest()]
+]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>
