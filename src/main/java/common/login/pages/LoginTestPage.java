@@ -13,6 +13,8 @@ public class LoginTestPage {
 
 	
 	public void LoginforFacebook(ExtWebDrivers ewd) {
+		
+	//	static Logger log = Logger.getLogger(LoginforFacebook.class);
 	
 		ewd.openURL(ewd.getFacebookUrlName());		
 		System.out.println("Username::::::::::::::" + Username);

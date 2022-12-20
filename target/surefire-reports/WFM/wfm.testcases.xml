@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="Suree" failures="0" tests="1" name="wfm.testcases.LoginTestCase" time="8.977" errors="0" timestamp="16 Dec 2022 07:48:46 GMT">
-  <testcase classname="wfm.testcases.LoginTestCase" name="facebooklogintest" time="6.321"/>
+<testsuite hostname="Suree" failures="0" tests="1" name="wfm.testcases.LoginTestCase" time="8.677" errors="0" timestamp="20 Dec 2022 03:07:03 GMT">
+  <testcase classname="wfm.testcases.LoginTestCase" name="facebooklogintest" time="5.453"/>
 </testsuite>

@@ -21,7 +21,12 @@
    <maven.compiler.target>1.6</maven.compiler.target>
 
  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
+ 
+ 
+                              <spropertyTeamNames>wfm</spropertyTeamNames>
+                                <spropertyBrowserName>chrome</spropertyBrowserName>
+                                <spropertyEnvName>sohum</spropertyEnvName>
+                                <spropertyTypeOfTesting>sanity</spropertyTypeOfTesting>
    
  
     </properties>
@@ -34,7 +39,7 @@
    
    
    <profile>
-            <id>wfm</id>
+            <id>Automation</id>
             <build>
                 <plugins>
                     <!-- Compiler plug-in -->
@@ -80,10 +85,18 @@
                         <version>2.19.1</version>
                         <configuration>
                             <systemPropertyVariables>
-                                <propertyTeamName>wfm</propertyTeamName>
+                                <propertyTeamName>${TeamName}</propertyTeamName>
+                                <propertyBrowserName>${browser}</propertyBrowserName>
+                                <propertyEnvName>${env}</propertyEnvName>
+                                <propertyTypeOfTesting>${typeoftesting}</propertyTypeOfTesting>
+                                
+                                <parameter name="Environment"  value="$Environment" />
+                                <parameter name="Browser"  value="$Browser" />
+                                 <parameter name="Types_of_Testing"  value="$Types_of_Testing" />
+                                 <parameter name="TeamName"  value="$TeamName" />
                             </systemPropertyVariables>
                             <suiteXmlFiles>
-                                <suiteXmlFile>suitescripts/WFM/wfm.xml</suiteXmlFile>
+                                <suiteXmlFile>${suiteFile}</suiteXmlFile>                                
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
@@ -193,7 +206,7 @@
   <version>5.5.2</version>
 </dependency>
     
-    
+  
     
   </dependencies>
 </project>

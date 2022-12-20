@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import common.login.pages.LoginTestPage;
 import common.utils.ExtWebDrivers;
+
 public class LoginTestCase extends ExtWebDrivers{
 	
 	private LoginTestPage logintestpage = null;
@@ -30,7 +31,7 @@ public void facebooklogintest() throws Exception{
 		LoginTestPage logintestpage = new LoginTestPage();
 		logintestpage.LoginforFacebook(new ExtWebDrivers());	
 		//extentTest.debug(MarkupHelper.createLabel(getBrowser() + " " + getVersion(), ExtentColor.TRANSPARENT));
-
+//extentTest.get().
 		
 	}
 	

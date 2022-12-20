@@ -5,6 +5,7 @@
     <classes>
       <class name="wfm.testcases.LoginTestCase">
         <methods>
+          <include name="tearDown"/>
           <include name="nameBefore"/>
           <include name="teaminfo"/>
           <include name="facebooklogintest"/>

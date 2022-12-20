@@ -7,6 +7,7 @@
 <listener class-name="common.utils.TestListener"></listener>
 </listeners>
 
+
 <test name ="wfm.testcases">
  <classes>
                 <class name="wfm.testcases.LoginTestCase"><!-- close tag is redundant here-->

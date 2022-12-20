@@ -1,2 +1,6 @@
+common\utils\ExtentReporterNG.class
+common\utils\ReaddatafromExcelfile.class
 common\login\pages\LoginTestPage.class
 common\utils\ExtWebDrivers.class
+common\utils\TestListener.class
+common\utils\WritedataonExcelfile.class

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [wfm.testcases.FacebookLoginTestCase]" verbose="0">
-  <test name="Command line test(failed)" preserve-order="false">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
+  <test name="Surefire test(failed)" preserve-order="false">
     <classes>
-      <class name="wfm.testcases.FacebookLoginTestCase">
+      <class name="wfm.testcases.LoginTestCase">
         <methods>
+          <include name="tearDown"/>
           <include name="nameBefore"/>
           <include name="teaminfo"/>
+          <include name="setup"/>
           <include name="facebooklogintest"/>
         </methods>
       </class>

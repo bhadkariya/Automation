@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="Suree" failures="1" tests="1" name="wfm.testcases.LoginTestCase" time="7.747" errors="0" timestamp="17 Dec 2022 05:39:21 GMT">
+  <testcase classname="wfm.testcases.LoginTestCase" name="facebooklogintest" time="3.941">
+    <failure type="java.lang.NullPointerException">
+      <![CDATA[java.lang.NullPointerException
+	at common.utils.ExtWebDrivers.reportComment(ExtWebDrivers.java:257)
+	at common.login.pages.LoginTestPage.LoginforFacebook(LoginTestPage.java:24)
+	at wfm.testcases.LoginTestCase.facebooklogintest(LoginTestCase.java:32)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:132)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:147)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+... Removed 22 stack frames]]>
+    </failure>
+  </testcase>
+</testsuite>

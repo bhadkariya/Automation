@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="10.309" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="10.473" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.16.1+1-LTS-1"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.16.1\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\ProgramData\Jenkins\.jenkins\workspace\automation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\ProgramData\Jenkins\.jenkins\workspace\AutomationWithInputs"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://openjdk.java.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,8 +15,9 @@
     <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\ProgramData\Jenkins\.jenkins\workspace\automation"/>
+    <property name="user.dir" value="C:\ProgramData\Jenkins\.jenkins\workspace\AutomationWithInputs"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="TeamName" value="WFM"/>
     <property name="java.runtime.version" value="11.0.16.1+1-LTS-1"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="os.arch" value="amd64"/>
@@ -44,7 +45,7 @@
     <property name="java.class.path" value="C:\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Pwfm -f D:\work\automaton\pom.xml"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -PAutomation -f D:\work\automaton\pom.xml -DEnvironment=Staging -DBrowser=Chrome -DTypes_of_Testing=Regression -DTeamName=WFM -DsuiteFile=suitescripts/WFM/Regression.xml"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-11.0.16.1"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -54,13 +55,17 @@
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="maven.home" value="C:\apache-maven-3.8.6"/>
     <property name="file.separator" value="\"/>
+    <property name="Environment" value="Staging"/>
     <property name="java.version.date" value="2022-08-18"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="18.9"/>
+    <property name="suiteFile" value="suitescripts/WFM/Regression.xml"/>
+    <property name="Types_of_Testing" value="Regression"/>
     <property name="sun.desktop" value="windows"/>
+    <property name="Browser" value="Chrome"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="facebooklogintest" classname="wfm.testcases.LoginTestCase" time="6.322"/>
+  <testcase name="facebooklogintest" classname="wfm.testcases.LoginTestCase" time="5.452"/>
 </testsuite>

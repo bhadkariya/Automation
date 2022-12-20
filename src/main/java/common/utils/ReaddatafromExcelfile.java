@@ -87,11 +87,15 @@ public class ReaddatafromExcelfile {
 
     //Prepare the path of excel file
 
-    String filePath = System.getProperty("user.dir")+"\\resources\\TestData\\WFM";
+    String filePath = System.getProperty("user.dir")+"\\resources\\TestData\\WFM\\";
+    
+    System.out.println("excel path ;;;;;;"+filePath);
 
     //Call read file method of the class to read data
 
     objExcelFile.readExcel(filePath,"wfm.xlsx","wfm");
+    
+    System.out.println("111111111111111excel path ;;;;;;"+filePath);
 
     }
 
